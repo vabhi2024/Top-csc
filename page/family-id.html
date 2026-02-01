@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOP CSC || Home</title>
+
+<!-- Google Font : Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .search-box {
+        background: #ffffff;
+        padding: 28px;
+        border-radius: 14px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+        text-align: center;
+        width: 90%;
+        max-width: 420px;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .search-box h2 {
+        margin-bottom: 18px;
+        color: #2a5298;
+        font-weight: 600;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+        border: 2px solid #2a5298;
+        border-radius: 10px;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    .search-box input:focus {
+        border-color: #1e3c72;
+        box-shadow: 0 0 6px rgba(30,60,114,0.4);
+    }
+
+    .search-box button {
+        margin-top: 18px;
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        font-weight: 500;
+        background: #2a5298;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .search-box button:hover {
+        background: #1e3c72;
+        transform: translateY(-1px);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="search-box">
+    <h2>Your Family Details</h2>
+    <input type="number" id="familyId" placeholder="Enter Your Ration Card Number">
+    <button onclick="searchFamily()">Search</button>
+</div>
+
+<script>
+function searchFamily() {
+    const familyId = document.getElementById("familyId").value.trim();
+
+    if (familyId === "") {
+        alert("Please enter Family ID");
+        return;
+    }
+
+    const baseURL = "https://familyid.up.gov.in/integrations/DigilockerCard/digilockercard.aspx?familyId=";
+    const finalURL = baseURL + encodeURIComponent(familyId);
+
+    window.open(finalURL, "_blank");
+}
+
+// Enter key support
+document.getElementById("familyId").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        searchFamily();
+    }
+});
+</script>
+
+</body>
+</html>

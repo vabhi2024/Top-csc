@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Updates | Sarkari Sites</title>
+<title>New Updates | Top CSC</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -53,9 +53,15 @@ header{
   background:rgba(255,255,255,0.06);
   border-radius:12px;
   border:1px solid rgba(255,255,255,0.15);
-  padding:16px;
-  margin-bottom:16px;
+  padding:18px;
+  margin-bottom:18px;
   backdrop-filter:blur(3px);
+  transition:0.3s;
+}
+
+.update-box:hover{
+  transform:translateY(-4px);
+  border-color:#00d4ff;
 }
 
 h2{
@@ -63,22 +69,35 @@ h2{
   margin-bottom:10px;
 }
 
+h3{
+  margin-top:5px;
+  margin-bottom:6px;
+  font-weight:600;
+  color:#fff;
+}
+
+/* badge */
 .badge{
+  display:inline-block;
   background:#ffd000;
   color:#000;
-  padding:3px 8px;
+  padding:4px 10px;
   border-radius:6px;
   font-size:11px;
   font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
 }
 
 .date{
   font-size:12px;
   color:#9ddfff;
+  margin-top:4px;
 }
 
 p{
   font-size:14px;
+  line-height:1.5;
 }
 
 /* button */
@@ -86,11 +105,16 @@ p{
   display:inline-block;
   background:#00d4ff;
   color:#000;
-  padding:7px 12px;
+  padding:7px 14px;
   border-radius:8px;
   text-decoration:none;
   font-weight:600;
-  margin-top:6px;
+  margin-top:10px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#4ce7ff;
 }
 
 /* footer */
@@ -107,49 +131,52 @@ footer a{
   text-decoration:none;
   margin:0 8px;
 }
+footer a:hover{
+  text-decoration:underline;
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Sarkari <span>Sites</span></div>
+  <div class="logo">Top <span>CSC</span></div>
 </header>
 
 <div class="container">
 
   <div class="update-box reveal">
     <h2>🆕 New Updates</h2>
-    <p>यहाँ आपको सभी नए सरकारी नोटिस, योजनाएँ, रजिस्ट्रेशन और स्टेटस अपडेट मिलेंगे।</p>
+    <p>यहाँ आपको सभी सरकारी योजनाओं, नोटिस, रजिस्ट्रेशन और स्टेटस से जुड़ी ताज़ा अपडेट मिलेंगी।</p>
   </div>
 
   <div class="update-box reveal">
-    <span class="badge">NEW</span>  
+    <span class="badge">NEW</span>
     <h3>ई–श्रम कार्ड में नई अपडेट</h3>
-    <p>ई–श्रम कार्ड से जुड़ी नई लाभ और वेरीफिकेशन प्रक्रिया में बदलाव जारी।</p>
+    <p>सरकार ने ई–श्रम कार्ड से जुड़ी नई लाभ योजना और वेरीफिकेशन प्रक्रिया में बदलाव जारी किया है।</p>
     <div class="date">Updated: आज</div>
     <a class="btn" href="#">Read Update</a>
   </div>
 
   <div class="update-box reveal">
-    <span class="badge">UPDATE</span>
-    <h3>आधार कार्ड मोबाइल लिंक स्थिति</h3>
-    <p>UIDAI ने मोबाइल लिंक वेरीफिकेशन प्रक्रिया को आसान बनाया है।</p>
+    <span class="badge" style="background:#00ffae;color:#000;">UPDATE</span>
+    <h3>आधार कार्ड मोबाइल लिंकिंग</h3>
+    <p>UIDAI ने आधार–मोबाइल वेरीफिकेशन प्रक्रिया को और तेज़ व आसान बना दिया है।</p>
     <div class="date">Updated: कल</div>
     <a class="btn" href="#">Check Details</a>
   </div>
 
   <div class="update-box reveal">
-    <span class="badge">ALERT</span>
-    <h3>PM किसान अगला किस्त अपडेट</h3>
-    <p>लाभार्थी सूची व बैंक खाते की स्थिति जांचें – नई सूची उपलब्ध।</p>
+    <span class="badge" style="background:#ff5757;color:#fff;">ALERT</span>
+    <h3>PM किसान अगली किस्त जारी</h3>
+    <p>लाभार्थियों की नई सूची जारी – बैंक अकाउंट और स्टेटस तुरंत चेक करें।</p>
     <div class="date">Updated: हाल ही में</div>
     <a class="btn" href="#">View Status</a>
   </div>
 
   <div class="update-box reveal">
-    <span class="badge">NOTICE</span>
-    <h3>पेंशन योजना दस्तावेज़ नियम में बदलाव</h3>
-    <p>नए दस्तावेज़ मानक जारी — पात्रता शर्तों में संशोधन।</p>
+    <span class="badge" style="background:#ffa600;color:#000;">NOTICE</span>
+    <h3>पेंशन योजना में दस्तावेज़ नियम बदलें</h3>
+    <p>नई पात्रता शर्तें और दस्तावेज़ मानक जारी – आवेदन से पहले अनिवार्य पढ़ें।</p>
     <div class="date">Updated: हाल ही में</div>
     <a class="btn" href="#">Open Notice</a>
   </div>

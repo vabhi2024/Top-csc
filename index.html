@@ -65,7 +65,21 @@
     <header>
      <a href="#"><img src="logo.jpg"></a>
         <nav>
-          <button class="btn"><a href="#" style="color:white"><i class="fa fa-history"></i></button></a>
+
+          <div class="lang-box">
+    <i class="fa fa-language"></i>
+    <select id="langSelect" class="notranslate">
+        <option value="hi">Default</option>
+        <option value="en">English</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option value="pa">Punjabi</option>
+        <option value="gu">Gujarati</option>
+        <option value="mr">Marathi</option>
+        <option value="ur">Urdu</option>
+        <option value="zh-CN">Chinese</option>
+    </select>
+</div>
           <button class="btn" id="loginBtn"><i class="fas fa-user-circle"></i></button>
           <button class="menu-btn" onclick="openMenu()"><i class="fa fa-bars"></i></button>
         </nav>
@@ -325,5 +339,6 @@
   <script src="js/login.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/translate.js"></script>
 </body>
 </html>

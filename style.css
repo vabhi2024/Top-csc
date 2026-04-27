@@ -132,6 +132,33 @@ header img {
     font-family: Poppins;
 }
 
+/* Google Translate */
+
+.lang-box{
+    display:flex;
+    align-items:center;
+    gap:0px;
+    padding:2px 5px;
+    border:1px solid #ddd;
+    border-radius:50px;
+    background:#fff;
+    width:fit-content;
+}
+
+.lang-box i{
+    font-size:18px;
+    color:#333;
+}
+
+.lang-box select{
+    border:none;
+    outline:none;
+    background:transparent;
+    cursor:pointer;
+    font-size:11px;
+    font-family: 'Poppins';
+}
+
 /* Full-Screen Dropdown */
 
 .menu-overlay {

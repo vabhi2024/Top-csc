@@ -1,9 +1,5 @@
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    const splash = document.getElementById("pwa-splash");
-    const app = document.getElementById("app");
-
-    if (splash) splash.style.display = "none";
-    if (app) app.style.display = "block";
-  }, 1500);
-});
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.log("SW Error:", err));
+}

@@ -9,20 +9,11 @@
 <meta name="author" content="AD Tech Inc.">
 
 <!-- Open Graph / Facebook -->
-<meta property="og:title" content="Govenment Official Web Applications developed by AD-Tech Inc Lucknow">
-<meta property="og:description" content="TOP CSC II ©Powered by adxmow">
-<meta property="og:image" content="http://topcsc.netlify.app/favicon.png">
-<meta property="og:url" content="http://topcsc.netlify.app/">
+<meta property="og:title" content="TOP CSC - Official Web Application">
+<meta property="og:description" content="Government official web applications developed by AD-Tech Inc Lucknow">
+<meta property="og:image" content="https://topcsc.netlify.app/favicon.png">
+<meta property="og:url" content="https://topcsc.netlify.app/">
 <meta property="og:type" content="website">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Govenment Official Web Applications developed by AD-Tech Inc Lucknow">
-<meta name="twitter:description" content="TOP CSC II ©Powered by adxmow">
-<meta name="twitter:image" content="http://topcsc.netlify.app/favicon.png">
-
-<!-- Robots -->
-<meta name="robots" content="index">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">    
@@ -37,11 +28,15 @@
  <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
- <!-- ANDROID APP TITLE -->
-  <meta name="mobile-web-app-capable" content="yes">
+<!-- PWA APP MODE -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-  <!-- iOS APP TITLE -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+<!-- iOS status bar style -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- App title on iOS -->
+<meta name="apple-mobile-web-app-title" content="TOP CSC">
 
 <!-- Google Search Console -->
 <meta name="google-site-verification" content="M8deCbS4nAkjl6zoPOfMVN-wfvZNYAjLddfY22j32yo" />
@@ -329,10 +324,20 @@
 <div id="google_translate_element" style="display:none;"></div>
 
  <script>
-        if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
-}
-    </script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("sw.js")
+        .then((registration) => {
+          console.log("Service Worker registered:", registration.scope);
+        })
+        .catch((error) => {
+          console.log("Service Worker registration failed:", error);
+        });
+    });
+  }
+</script>
+
   <script src="js/preloader.js"></script>      
   <script src="app.js"></script>
   <script src="js/footer-time.js"></script>

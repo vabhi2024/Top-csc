@@ -5,10 +5,10 @@ self.addEventListener("install", e => {
     caches.open(CACHE).then(c =>
       c.addAll([
         "/",
-        "/index.html",
-        "/style.css",
-        "/app.js",
-        "/manifest.json"
+        "index.html",
+        "style.css",
+        "app.js",
+        "manifest.json"
       ])
     )
   );

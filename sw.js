@@ -1,44 +1,26 @@
-const CACHE_NAME = "android-pwa-v1";
+const CACHE_NAME = "pwa-cache-v1";
 
-const ASSETS = [
+const urlsToCache = [
   "/",
-  "index.html",
-  "style.css",
-  "app.js",
-  "manifest.json"
+  "/index.html",
+  "/app.js",
+  "/manifest.json"
 ];
 
-// Install event → cache files
-self.addEventListener("install", (event) => {
+// Install event
+self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS);
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll(urlsToCache);
     })
   );
-  self.skipWaiting();
 });
 
-// Activate event → clean old caches
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
-      );
-    })
-  );
-  self.clients.claim();
-});
-
-// Fetch event → cache first strategy
-self.addEventListener("fetch", (event) => {
+// Fetch event (offline support)
+self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request);
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
     })
   );
 });

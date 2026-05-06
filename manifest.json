@@ -1,25 +1,20 @@
 {
   "name": "Top CSC",
   "short_name": "Top CSC",
-  "description": "© Developed by AD Tech Inc Lucknow",
-  "start_url": "index.html",
-  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#000",
+  "theme_color": "#000",
   "icons": [
     {
-      "src": "icons/icon-192x192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
-      "src": "icons/icon-512x512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }

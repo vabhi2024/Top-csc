@@ -1,6 +1,9 @@
 window.addEventListener("load", () => {
   setTimeout(() => {
-    document.getElementById("pwa-splash").style.display = "none";
-    document.getElementById("app").style.display = "block";
+    const splash = document.getElementById("pwa-splash");
+    const app = document.getElementById("app");
+
+    if (splash) splash.style.display = "none";
+    if (app) app.style.display = "block";
   }, 1500);
 });

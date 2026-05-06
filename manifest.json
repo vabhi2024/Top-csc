@@ -2,7 +2,7 @@
   "name": "Top CSC",
   "short_name": "Top CSC",
   "description": "© Developed by AD Tech Inc Lucknow",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
